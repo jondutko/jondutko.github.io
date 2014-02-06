@@ -1,0 +1,39 @@
+html {
+	margin: 0;
+	padding: 0;
+	}
+header {
+	background-color: #8A4991;
+	color: white;
+	text-align: center;
+	font-family: Arial, Helvetic, sans-serif;
+	}
+body {
+	font-family: Arial, Helvetic, sans-serif;
+	background-color: white;
+	}
+a:link {
+	color: white;
+	}
+a:visited {
+	color: #68208c;
+	}
+.center {
+	margin: auto;
+	width: 70%;
+	background-color: #8A4991;
+	}
+nav {
+	position: absolute;
+	background-color: #8A4991;
+	padding-right: 20px;
+	padding-top: 20px;
+	padding-left: 20px;
+	height: 600px;
+	}
+article {
+	padding-left: 20px;
+	padding-top: 10px;
+	height: 600px;
+	}
+	
