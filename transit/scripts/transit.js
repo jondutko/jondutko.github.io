@@ -72,7 +72,7 @@ function calculateShortest(){
 			idealStation = currentStation;
 		}
 	}
-	console.log("ideal station: " + idealStation + "idealDistance: " + idealDistance);
+	console.log("ideal station: " + idealStation.name + "idealDistance: " + idealDistance);
 }
 
 Number.prototype.toRad = function() {
@@ -90,6 +90,7 @@ function haversine(stationLat, stationLng){
         Math.sin(dLon/2) * Math.sin(dLon/2) * Math.cos(stationLat.toRad) * Math.cos(mylat.toRad); 
 	var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
 	var d = R * c;
+	console.log(d);
 	return d;
 }
 
