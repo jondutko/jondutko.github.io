@@ -1,17 +1,36 @@
-var lat, lng, mapOptions;
-function initialize() {
-  navigator.geolocation.getCurrentPosition(access);
-  mapOptions = {
+var mylat = 0;
+var mylng = 0;
+var request = newXMLHttpRequest();
+var me = new google.maps.LatLng(mylat, mylng);
+var mOptions = {
 	zoom: 8,
-	center: new google.maps.LatLng(lat, lng),
+	center: me,
 	mapTypeId: google.maps.MapTypeId.ROADMAP
-  };
-  console.log("we got here! 2");
-  var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-}
-function access(position){
-	lat = position.coords.latitude;
-	lng = position.coords.longitude;
-	console.log("latitude "+lat+" longitude "+lng);
+};
+var map;
+var marker;
+var inforwindow = new google.maps.InfoWindow();
+var places;
+
+function initialize() {
+  map = new google.maps.Map(document.getElementById('map-canvas'), mOptions);
+  findMe();
 }
 
+function findMe(){
+	if (navigator.geolocation){
+		navigator.geolocation.getCurrentPosition(function(position){
+			mylat = position.coords.latitude;
+			mylng = position.coords.longitude;
+			updateMap();
+		});
+	}
+	else{
+		alert("Geolocation is not supported by you internet browser.");
+	}
+}
+
+function updateMap(){
+	me = new google.maps.LatLng(mylat, mylng);
+	map.panTo(me);
+}
