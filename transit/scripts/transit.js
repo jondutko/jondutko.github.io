@@ -12,5 +12,6 @@ function initialize() {
 function access(position){
 	lat = position.coords.latitude;
 	lng = position.coords.longitude;
+	console.log("latitude "+lat+" longitude "+lng);
 }
 
