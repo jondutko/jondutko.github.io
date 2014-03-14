@@ -149,7 +149,7 @@ function calculateShortest(){
 	for (var i = 1; i < j; i++){
 		currentStation = stations[i];
 		currentDistance = haversine(currentStation.lat, currentStation.lng);
-		if(currentDistance < idealDistance){
+		if(currentDistance > idealDistance){
 			idealDistance = currentDistance;
 			idealStation = currentStation;
 		}
