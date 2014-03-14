@@ -1,6 +1,5 @@
 var mylat = 0;
 var mylng = 0;
-var request = newXMLHttpRequest();
 var me = new google.maps.LatLng(mylat, mylng);
 var mOptions = {
 	zoom: 8,
