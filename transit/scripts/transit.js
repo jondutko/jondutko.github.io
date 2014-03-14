@@ -20,7 +20,7 @@ function initialize() {
 
 function initializeStations(){
 	stations.push({'line' : "Blue", 'name' : "Airport",
-		'lat' = 42.37426, 'lng' = -71.0304});
+		'lat' : 42.37426, 'lng' : -71.0304});
 }
 
 function findMe(){
