@@ -16,6 +16,7 @@ function initialize() {
   map = new google.maps.Map(document.getElementById('map-canvas'), mOptions);
   initializeStations();
   findMe();
+  calculateShortest();
 }
 
 function initializeStations(){
