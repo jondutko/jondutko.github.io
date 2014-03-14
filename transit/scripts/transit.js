@@ -8,6 +8,8 @@ var mOptions = {
 };
 var stations = [];
 var map;
+var idealStation;
+var currentStation;
 var currentMarker;
 var inforwindow = new google.maps.InfoWindow();
 var places;
@@ -17,6 +19,16 @@ function initialize() {
   initializeStations();
   findMe();
   calculateShortest();
+  markClosestLine();
+}
+
+function markClosestLine(){
+	var q = stations.length;
+	for(var y = 0; y < q; y++){
+		if(idealStation.line == stations[q].line){
+			createMarker(new google.maps.LatLng(stations[q].lat, stations[q].lng), stations[q].name);
+		}
+	}
 }
 
 function initializeStations(){
@@ -143,23 +155,29 @@ function findMe(){
 
 function calculateShortest(){
 	var j = stations.length;
-	var idealStation = stations[0];
-	var idealDistance = haversine(stations[0].lat, stations[0].lng);
+	idealStation = stations[0];
+	idealDistance = haversine(stations[0].lat, stations[0].lng);
 	var currentStation, currentDistance;
 	for (var i = 1; i < j; i++){
 		currentStation = stations[i];
 		currentDistance = haversine(currentStation.lat, currentStation.lng);
 		if(currentDistance < idealDistance){
-			console.log("switch!");
 			idealDistance = currentDistance;
 			idealStation = currentStation;
 		}
 	}
-	console.log("ideal station: " + idealStation.name + "idealDistance: " + idealDistance);
 }
 
 Number.prototype.toRad = function() {
    return this * Math.PI / 180;
+}
+
+function createMarker(loc, name){
+	var marker = new google.maps.Marker({
+		map: map,
+		position: loc,
+		title: name
+	});
 }
 
 function haversine(stationLat, stationLng){
@@ -174,7 +192,6 @@ function haversine(stationLat, stationLng){
                 Math.sin(dLon/2) * Math.sin(dLon/2);  
 	var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
 	var d = R * c; 
-	//console.log(d);
 	return d;
 }
 
