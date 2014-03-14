@@ -44,6 +44,60 @@ function initializeStations(){
 		'lat' : 42.41342, 'lng' : -70.9916});
 	stations.push({'line' : "Blue", 'name' : "Wood Island",
 		'lat' : 42.41342, 'lng' : -71.0229});
+	stations.push({'line' : "Orange", 'name' : "Back Bay",
+		'lat' : 42.34735, 'lng' : -71.0757});
+	stations.push({'line' : "Orange", 'name' : "Chinatown",
+		'lat' : 42.35255, 'lng' : -71.0628});
+	stations.push({'line' : "Orange", 'name' : "Community College",
+		'lat' : 42.37362, 'lng' : -71.0695});
+	stations.push({'line' : "Orange", 'name' : "Downtown Crossing",
+		'lat' : 42.35552, 'lng' : -71.0602});
+	stations.push({'line' : "Orange", 'name' : "Forest Hills",
+		'lat' : 42.30052, 'lng' : -71.1137});
+	stations.push({'line' : "Orange", 'name' : "Green Street",
+		'lat' : 42.31053, 'lng' : -71.1074});
+	stations.push({'line' : "Orange", 'name' : "Haymarket",
+		'lat' : 42.36302, 'lng' : -71.0583});
+	stations.push({'line' : "Orange", 'name' : "Jackson Square",
+		'lat' : 42.32313, 'lng' : -71.0996});
+	stations.push({'line' : "Orange", 'name' : "Malden Center",
+		'lat' : 42.32313, 'lng' : -71.0741});
+	stations.push({'line' : "Orange", 'name' : "Mass Ave",
+		'lat' : 42.34151, 'lng' : -71.0834});
+	stations.push({'line' : "Orange", 'name' : "North Station",
+		'lat' : 42.36558, 'lng' : -71.0613});
+	stations.push({'line' : "Orange", 'name' : "Oak Grove",
+		'lat' : 42.43668, 'lng' : -71.0711});
+	stations.push({'line' : "Orange", 'name' : "Roxbury Crossing",
+		'lat' : 42.3314, 'lng' : -71.0955});
+	stations.push({'line' : "Orange", 'name' : "Ruggles",
+		'lat' : 42.33638, 'lng' : -71.089});
+	stations.push({'line' : "Orange", 'name' : "State Street",
+		'lat' : 42.35898, 'lng' : -71.0576});
+	stations.push({'line' : "Orange", 'name' : "Stony Brook",
+		'lat' : 42.31706, 'lng' : -71.1042});
+	stations.push({'line' : "Orange", 'name' : "Sullivan",
+		'lat' : 42.38398, 'lng' : -71.077});
+	stations.push({'line' : "Orange", 'name' : "Tufts Medical",
+		'lat' : 42.34966, 'lng' : -71.0639});
+	stations.push({'line' : "Orange", 'name' : "Wellington",
+		'lat' : 42.40237, 'lng' : -71.0771});
+	stations.push({'line' : "Red", 'name' : "Alewife",
+		'lat' : 42.39543, 'lng' : -71.1425});	
+	stations.push({'line' : "Red", 'name' : "Andrew",
+		'lat' : 42.33015, 'lng' : -71.0577});
+	stations.push({'line' : "Red", 'name' : "Ashmont",
+		'lat' : 42.28465, 'lng' : -71.0645});
+	stations.push({'line' : "Red", 'name' : "Braintree",
+		'lat' : 42.20785, 'lng' : -71.0011});
+	stations.push({'line' : "Red", 'name' : "Broadway",
+		'lat' : 42.34262, 'lng' : -71.057});
+	stations.push({'line' : "Red", 'name' : "Central Square",
+		'lat' : 42.36549, 'lng' : -71.1038});
+	stations.push({'line' : "Red", 'name' : "Charles/MGH",
+		'lat' : 42.36117, 'lng' : -71.0706});
+	stations.push({'line' : "Red", 'name' : "Davis",
+		'lat' : 42.39674, 'lng' : -71.1218});			
 }
 
 function findMe(){
