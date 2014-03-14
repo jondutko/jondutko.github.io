@@ -7,7 +7,7 @@ var mOptions = {
 	mapTypeId: google.maps.MapTypeId.ROADMAP
 };
 var map;
-var marker;
+var currentMarker;
 var inforwindow = new google.maps.InfoWindow();
 var places;
 
@@ -32,4 +32,10 @@ function findMe(){
 function updateMap(){
 	me = new google.maps.LatLng(mylat, mylng);
 	map.panTo(me);
+	currentMarker = new google.maps.Marker({
+		position: me,
+		title: "You are here."
+		
+	});
+	currentMarker.setMap(map);
 }
