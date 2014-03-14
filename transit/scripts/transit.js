@@ -97,7 +97,35 @@ function initializeStations(){
 	stations.push({'line' : "Red", 'name' : "Charles/MGH",
 		'lat' : 42.36117, 'lng' : -71.0706});
 	stations.push({'line' : "Red", 'name' : "Davis",
-		'lat' : 42.39674, 'lng' : -71.1218});			
+		'lat' : 42.39674, 'lng' : -71.1218});	
+	stations.push({'line' : "Red", 'name' : "Downtown Crossing",
+		'lat' : 42.35552, 'lng' : -71.0602});
+	stations.push({'line' : "Red", 'name' : "Fields Corner",
+		'lat' : 42.30009, 'lng' : -71.0617});		
+	stations.push({'line' : "Red", 'name' : "Harvard Square",
+		'lat' : 42.37336, 'lng' : -71.119});
+	stations.push({'line' : "Red", 'name' : "JFK/UMass",
+		'lat' : 42.32069, 'lng' : -71.0524});
+	stations.push({'line' : "Red", 'name' : "Kendall/MIT",
+		'lat' : 42.36249, 'lng' : -71.0862});
+	stations.push({'line' : "Red", 'name' : "North Quincy",
+		'lat' : 42.27528, 'lng' : -71.0296});
+	stations.push({'line' : "Red", 'name' : "Park Street",
+		'lat' : 42.27528, 'lng' : -71.0624});
+	stations.push({'line' : "Red", 'name' : "Porter Square",
+		'lat' : 42.3884, 'lng' : -71.1191});
+	stations.push({'line' : "Red", 'name' : "Quincy Adams",
+		'lat' : 42.23339, 'lng' : -71.0072});
+	stations.push({'line' : "Red", 'name' : "Quincy Center",
+		'lat' : 42.25181, 'lng' : -71.0054});
+	stations.push({'line' : "Red", 'name' : "Savin Hill",
+		'lat' : 42.31129, 'lng' : -71.0533});
+	stations.push({'line' : "Red", 'name' : "Shawmut",
+		'lat' : 42.29313, 'lng' : -71.0657});
+	stations.push({'line' : "Red", 'name' : "South Station",
+		'lat' : 42.35227, 'lng' : -71.0552});
+	stations.push({'line' : "Red", 'name' : "Wollaston",
+		'lat' : 42.26651, 'lng' : -71.0203});			
 }
 
 function findMe(){
