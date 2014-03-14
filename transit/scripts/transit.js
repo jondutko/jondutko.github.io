@@ -85,8 +85,6 @@ function haversine(stationLat, stationLng){
 	var x2 = mylng - stationLng;
 	var dLat = x1.toRad();
 	var dLon = x2.toRad();
-	var lat1 = lat1.toRad();
-	var lat2 = lat2.toRad();
 
 	var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
         Math.sin(dLon/2) * Math.sin(dLon/2) * Math.cos(lat1) * Math.cos(lat2); 
