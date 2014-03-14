@@ -24,8 +24,10 @@ function initialize() {
 
 function markClosestLine(){
 	var q = stations.length;
+	console.log("we out here!");
 	for(var y = 0; y < q; y++){
 		if(idealStation.line == stations[q].line){
+			console.log("station marked!");
 			createMarker(new google.maps.LatLng(stations[q].lat, stations[q].lng), stations[q].name);
 		}
 	}
