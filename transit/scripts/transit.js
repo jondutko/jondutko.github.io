@@ -80,6 +80,7 @@ Number.prototype.toRad = function() {
 }
 
 function haversine(stationLat, stationLng){
+	console.log("we out here");
 	var R = 6371; // km
 	var x1 = mylat - stationLat;
 	var x2 = mylng - stationLng;
