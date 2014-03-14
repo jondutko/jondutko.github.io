@@ -80,17 +80,17 @@ Number.prototype.toRad = function() {
 }
 
 function haversine(stationLat, stationLng){
-	console.log("we out here");
 	var R = 6371; // km
-	var x1 = mylat - stationLat;
-	var x2 = mylng - stationLng;
-	var dLat = x1.toRad();
-	var dLon = x2.toRad();
 
-	var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
-        Math.sin(dLon/2) * Math.sin(dLon/2) * Math.cos(stationLat.toRad) * Math.cos(mylat.toRad); 
+	var x1 = mylat-stationLat;
+	var dLat = x1.toRad();  
+	var x2 = mylng-stationLng;
+	var dLon = x2.toRad();  
+	var a = Math.sin(dLat/2) * Math.sin(dLat/2) + 
+                Math.cos(stationLat.toRad()) * Math.cos(mylat.toRad()) * 
+                Math.sin(dLon/2) * Math.sin(dLon/2);  
 	var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
-	var d = R * c;
+	var d = R * c; 
 	console.log(d);
 	return d;
 }
