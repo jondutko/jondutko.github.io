@@ -75,6 +75,10 @@ function calculateShortest(){
 	console.log("ideal station: " + idealStation + "idealDistance: " + idealDistance);
 }
 
+Number.prototype.toRad = function() {
+   return this * Math.PI / 180;
+}
+
 function haversine(stationLat, stationLng){
 	var R = 6371; // km
 	var x1 = mylat - stationLat;
