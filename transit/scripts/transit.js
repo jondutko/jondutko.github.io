@@ -1,7 +1,7 @@
-var lat, lng;
+var lat, lng, mapOptions;
 function initialize() {
   navigator.geolocation.getCurrentPosition(access);
-  var mapOptions = {
+  mapOptions = {
 	zoom: 8,
 	center: new google.maps.LatLng(lat, lng),
 	mapTypeId: google.maps.MapTypeId.ROADMAP
