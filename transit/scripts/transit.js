@@ -22,16 +22,6 @@ function initialize() {
   markClosestLine();
 }
 
-function markClosestLine(){
-	var q = stations.length;
-	console.log("we out here!");
-	for(var y = 0; y < q; y++){
-		if(idealStation.line == stations[q].line){
-			console.log("station marked!");
-			createMarker(new google.maps.LatLng(stations[q].lat, stations[q].lng), stations[q].name);
-		}
-	}
-}
 
 function initializeStations(){
 	stations.push({'line' : "Blue", 'name' : "Airport",
@@ -166,6 +156,19 @@ function calculateShortest(){
 		if(currentDistance < idealDistance){
 			idealDistance = currentDistance;
 			idealStation = currentStation;
+		}
+	}
+}
+
+
+function markClosestLine(){
+	var q = stations.length;
+	console.log("we out here!");
+	for(var y = 0; y < q; y++){
+		var currentStation = stations[q];
+		if(idealStation.line == currentStation.line){
+			console.log("station marked!");
+			createMarker(new google.maps.LatLng(currentStation.lat, currentStation.lng), currentStation.name);
 		}
 	}
 }
