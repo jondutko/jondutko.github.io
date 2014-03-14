@@ -149,7 +149,8 @@ function calculateShortest(){
 	for (var i = 1; i < j; i++){
 		currentStation = stations[i];
 		currentDistance = haversine(currentStation.lat, currentStation.lng);
-		if(currentDistance > idealDistance){
+		if(currentDistance < idealDistance){
+			console.log("switch!");
 			idealDistance = currentDistance;
 			idealStation = currentStation;
 		}
@@ -173,13 +174,13 @@ function haversine(stationLat, stationLng){
                 Math.sin(dLon/2) * Math.sin(dLon/2);  
 	var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
 	var d = R * c; 
-	console.log(d);
+	//console.log(d);
 	return d;
 }
 
 function updateMap(){
 	me = new google.maps.LatLng(mylat, mylng);
-	map.panTo(me);
+	map.panTo(me);//
 	currentMarker = new google.maps.Marker({
 		position: me,
 		title: "You are here."
