@@ -5,7 +5,7 @@ mapOptions = {
 };
 
 function initialize() {
-  console.log("we got here555");
+  console.log("we got here666");
   map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 }
 
