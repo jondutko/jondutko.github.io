@@ -77,8 +77,10 @@ function calculateShortest(){
 
 function haversine(stationLat, stationLng){
 	var R = 6371; // km
-	var dLat = (mylat-stationLat).toRad();
-	var dLon = (mylng-stationLng).toRad();
+	var x1 = mylat - stationLat;
+	var x2 = mylng - stationLng;
+	var dLat = x1.toRad();
+	var dLon = x2.toRad();
 	var lat1 = lat1.toRad();
 	var lat2 = lat2.toRad();
 
