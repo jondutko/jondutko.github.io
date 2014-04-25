@@ -167,7 +167,6 @@ function markClosestLine(){
 	for(var y = 0; y < q; y++){
 		var currentStation = stations[y];
 		if(idealStation.line == currentStation.line){
-			console.log("station marked!");
 			createMarker(new google.maps.LatLng(currentStation.lat, currentStation.lng), currentStation.name);
 		}
 	}
